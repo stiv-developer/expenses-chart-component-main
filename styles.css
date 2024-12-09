@@ -1,0 +1,199 @@
+:root {
+    /* ## Colors */
+
+    /* ### Primary */
+
+    --Soft-red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+
+    /* ### Neutral */
+
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--Cream);
+    font-family: "DM Sans", serif;
+}
+
+.container {
+    padding: 40px 20px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+/* CARD BALANCE */
+
+.card-balance {
+    background-color: var(--Soft-red);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-balance .group p {
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.card-balance .group span {
+    color: white;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.card-balance .group img {
+    width: 65px;
+}
+
+/* CARD SPENDING  */
+
+.card-spending {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.card-spending .card-body {}
+
+.card-spending .card-body h2 {
+    margin: 0;
+    color: var(--Dark-brown);
+}
+
+/* CHART  */
+
+.card-spending .card-body .chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    padding:20px 0px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.card-spending .card-body .chart .bar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.card-spending .card-body .chart .bar .amount{
+    display: none;
+    position: absolute;
+    background-color: var(--Dark-brown) !important;
+    width: 40px;
+    padding: 3px;
+    top: -25px;
+    left: -10px;
+}
+
+.card-spending .card-body .chart .bar .amount p{
+    color: white;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.card-spending .card-body .chart .bar div {
+    width: 30px;
+    border-radius: 4px;
+    background-color: #ee6c4d;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+
+}
+
+.card-spending .card-body .chart .bar div:hover {
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.card-spending .card-body .chart .bar:nth-child(3) div {
+    background-color: #78cdd4;
+}
+
+.card-spending .card-body .chart .bar div[data-height] {
+    height: var(--height);
+}
+
+.card-spending .card-body .chart .label {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: var(--Medium-brown);
+    font-weight: 400;
+    background-color: white !important;
+}
+
+.card-spending .card-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    border-top: 2px solid var(--Cream);
+    padding-top: 20px;
+}
+
+.card-spending .card-footer .group .total {
+    color: var(--Medium-brown);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.card-spending .card-footer .group .amount {
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.card-spending .card-footer .group.second {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.card-spending .card-footer .group .percentage {
+    margin: 0;
+    color: var(--Dark-brown);
+    font-weight: 800;
+}
+
+.card-spending .card-footer .group .text {
+    color: var(--Medium-brown);
+    font-weight: 500;
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+@media only screen and (min-width: 500px) {
+
+    section{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .container{
+        width: 375px;
+        margin: 0 auto;
+    }
+}
