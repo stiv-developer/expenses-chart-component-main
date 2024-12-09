@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 amount.className = 'amount';
 
                 const textAmount = document.createElement('p');
-                textAmount.textContent = item.amount
+                textAmount.textContent = `$${item.amount}`;
 
                 amount.appendChild(textAmount)
 
